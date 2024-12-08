@@ -21,7 +21,7 @@
                     const categoryCard = `
                         <div class="col-6 col-md-4">
                                     <div class="card category-card shadow-sm border-0">
-                                        <img src="/upload/OIP.jfif" class="card-img-top"
+                                        <img src="upload/OIP.jfif" class="card-img-top"
                                              alt="Electronics">
                                         <div class="card-body text-center">
                                             <h5 class="card-title">${category.name}</h5>
