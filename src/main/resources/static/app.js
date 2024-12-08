@@ -1,12 +1,13 @@
 
         // Function to fetch and display categories from API
+       const URI = `https://phukientrongphu-1.onrender.com/api/categories`;
         async function loadCategories() {
             const container = document.getElementById('category-container');
             container.innerHTML = '<p>Loading categories...</p>'; // Show loading text
 
             try {
                 // Fetch data from API
-                const response = await fetch('http://localhost:8080/api/categories');
+                const response = await fetch(URI);
                 if (!response.ok) {
                     throw new Error('Failed to fetch categories');
                 }
@@ -20,7 +21,7 @@
                     const categoryCard = `
                         <div class="col-6 col-md-4">
                                     <div class="card category-card shadow-sm border-0">
-                                        <img src="../../upload/OIP.jfif" class="card-img-top"
+                                        <img src="/upload/OIP.jfif" class="card-img-top"
                                              alt="Electronics">
                                         <div class="card-body text-center">
                                             <h5 class="card-title">${category.name}</h5>
