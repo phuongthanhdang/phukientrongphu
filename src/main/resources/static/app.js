@@ -1,6 +1,7 @@
 
         // Function to fetch and display categories from API
-       const URI = `https://phukientrongphu-1.onrender.com/api/categories`;
+//       const URI = `https://phukientrongphu-1.onrender.com/api/categories`;
+        const URI = `http://localhost:8080/api/categories`;
         async function loadCategories() {
             const container = document.getElementById('category-container');
             container.innerHTML = '<p>Loading categories...</p>'; // Show loading text
@@ -21,11 +22,11 @@
                     const categoryCard = `
                         <div class="col-6 col-md-4">
                                     <div class="card category-card shadow-sm border-0">
-                                        <img src="upload/OIP.jfif" class="card-img-top"
-                                             alt="Electronics">
+                                        <img src=${category.imageUrl} class="card-img-top"
+                                             alt=${category.name}>
                                         <div class="card-body text-center">
                                             <h5 class="card-title">${category.name}</h5>
-                                            <a href="#" class="btn btn-primary">Shop Now</a>
+                                            <a href="product.html?categoryId=${category.id}" class="btn btn-primary">Xem sản phẩm</a>
                                         </div>
                                     </div>
                                 </div>`;

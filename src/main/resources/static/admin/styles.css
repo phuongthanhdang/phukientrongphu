@@ -1,0 +1,105 @@
+/* Tổng quan */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    border-bottom: 3px solid #ff6f61;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Banner */
+section.bg-light {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+section.bg-light h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+section.bg-light button {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+/* Danh mục sản phẩm */
+section .col-md-3 img {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+section .col-md-3 img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+ .sidebar {
+            height: 100vh;
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        .content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                position: relative;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+        }
+
+
