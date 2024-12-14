@@ -154,7 +154,8 @@
     // Get categoryId from URL parameters
     const urlParams = new URLSearchParams(window.location.search);
     const categoryId = urlParams.get('categoryId');
-    const URI = `http://localhost:8080/api/products?categoryId=${categoryId}`;
+     const URI_DEFAULT = `https://phukientrongphu-1.onrender.com`;
+    const URI = URI_DEFAULT + `/api/products?categoryId=${categoryId}`;
 
     // Function to load products based on categoryId
     async function loadProducts() {

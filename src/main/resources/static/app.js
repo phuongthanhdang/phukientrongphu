@@ -1,7 +1,8 @@
 
         // Function to fetch and display categories from API
 //       const URI = `https://phukientrongphu-1.onrender.com/api/categories`;
-        const URI = `http://localhost:8080/api/categories`;
+        const URI_DEFAULT = `https://phukientrongphu-1.onrender.com`;
+        const URI = URI_DEFAULT + `/api/categories`;
         async function loadCategories() {
             const container = document.getElementById('category-container');
             container.innerHTML = '<p>Loading categories...</p>'; // Show loading text

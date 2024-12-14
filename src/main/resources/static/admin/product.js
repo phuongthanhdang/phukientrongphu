@@ -1,6 +1,7 @@
 
-    const CATEGORYS_API = 'http://localhost:8080/api/categories';
-    const PRODUCTS_API = 'http://localhost:8080/api/products';
+    const URI_DEFAULT = `https://phukientrongphu-1.onrender.com`;
+    const CATEGORYS_API = URI_DEFAULT + '/api/categories';
+    const PRODUCTS_API = URI_DEFAULT+ '/api/products';
     const productForm = document.getElementById('productForm');
     const categorySelect = document.getElementById('categoryId');
 
@@ -20,7 +21,7 @@
     }
     loadCategoryProducts();
     
-    const URI_GET_PRODUCT = `http://localhost:8080/api/products`;
+    const URI_GET_PRODUCT = URI_DEFAULT + `api/products`;
     async function loadProducts() {
         const container = document.getElementById('product-tr');
         container.innerHTML = '<p>Loading product...</p>'; // Show loading text
@@ -98,7 +99,7 @@
 // API xóa product
 async function deleteProduct(productId) {
     try {
-        const response = await fetch(`http://localhost:8080/api/products/${productId}`, {
+        const response = await fetch(URI_DEFAULT +`/api/products/${productId}`, {
             method: 'DELETE',
         });
         if (response.ok) {

@@ -1,7 +1,8 @@
 
         // Function to fetch and display categories from API
 //       const URI = `https://phukientrongphu-1.onrender.com/api/categories`;
-        const URI = `http://localhost:8080/api/categories`;
+        const URI_DEFAULT = `https://phukientrongphu-1.onrender.com`;
+        const URI = URI_DEFAULT + `/api/categories`;
         async function loadCategories() {
             const container = document.getElementById('category-tr');
             container.innerHTML = '<p>Loading categories...</p>'; // Show loading text
@@ -44,7 +45,7 @@
 
 
 //add category
-const CATEGORY_API = 'http://localhost:8080/api/categories';
+const CATEGORY_API = URI_DEFAULT + '/api/categories';
     const categoryForm = document.getElementById('categoryForm');
 
     categoryForm.addEventListener('submit', function (event) {
@@ -75,7 +76,7 @@ const CATEGORY_API = 'http://localhost:8080/api/categories';
 // API xóa category
 async function deleteCategory(categoryId) {
     try {
-        const response = await fetch(`http://localhost:8080/api/categories/${categoryId}`, {
+        const response = await fetch(URI_DEFAULT + `/api/categories/${categoryId}`, {
             method: 'DELETE',
         });
         if (response.ok) {
